@@ -31,5 +31,17 @@ extension ViewController: UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return icons.count
     }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("IconCell", forIndexPath: indexPath)
+        let icon = icons[indexPath.row]
+        cell.textLabel?.text = icon.title
+        cell.detailTextLabel?.text = icon.subtitle
+        if let iconImage = icon.image {
+            cell.imageView?.image = iconImage
+        }
+        return cell
+    }
 }
 
