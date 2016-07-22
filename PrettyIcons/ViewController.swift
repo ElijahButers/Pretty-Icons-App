@@ -18,6 +18,7 @@ class ViewController: UIViewController {
         let iconSets = IconSet.iconSets()
         let iconSet = iconSets[0]
         icons = iconSet.icons
+        automaticallyAdjustsScrollViewInsets = false
     }
 
     override func didReceiveMemoryWarning() {
