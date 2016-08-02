@@ -33,7 +33,9 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return icons.count
+        
+        let iconSet = iconSets[section]
+        return iconSet.icons.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
