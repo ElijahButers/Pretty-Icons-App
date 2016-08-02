@@ -15,9 +15,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let iconSets = IconSet.iconSets()
-        let iconSet = iconSets[0]
-        icons = iconSet.icons
+        iconSets = IconSet.iconSets()
         automaticallyAdjustsScrollViewInsets = false
     }
 
