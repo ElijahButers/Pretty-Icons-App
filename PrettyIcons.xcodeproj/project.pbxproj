@@ -47,7 +47,7 @@
 		E25890A91D422BE000F4738B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E25890AC1D422BE000F4738B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E25890AE1D422BE000F4738B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E25890B51D42333700F4738B /* Icon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
+		E25890B51D42333700F4738B /* Icon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Icon.swift; path = Icons/Icon.swift; sourceTree = "<group>"; };
 		E25890B61D42333700F4738B /* icons_winter_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icons_winter_01.png; sourceTree = "<group>"; };
 		E25890B71D42333700F4738B /* icons_winter_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icons_winter_02.png; sourceTree = "<group>"; };
 		E25890B81D42333700F4738B /* icons_winter_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icons_winter_03.png; sourceTree = "<group>"; };
@@ -58,7 +58,7 @@
 		E25890BD1D42333700F4738B /* icons_winter_08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icons_winter_08.png; sourceTree = "<group>"; };
 		E25890BE1D42333700F4738B /* icons_winter_09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icons_winter_09.png; sourceTree = "<group>"; };
 		E25890BF1D42333700F4738B /* icons_winter_10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icons_winter_10.png; sourceTree = "<group>"; };
-		E25890C01D42333700F4738B /* IconSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconSet.swift; sourceTree = "<group>"; };
+		E25890C01D42333700F4738B /* IconSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IconSet.swift; path = Icons/IconSet.swift; sourceTree = "<group>"; };
 		E25890C11D42333700F4738B /* summericons_100px_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = summericons_100px_01.png; sourceTree = "<group>"; };
 		E25890C21D42333700F4738B /* summericons_100px_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = summericons_100px_02.png; sourceTree = "<group>"; };
 		E25890C31D42333700F4738B /* summericons_100px_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = summericons_100px_03.png; sourceTree = "<group>"; };
@@ -107,6 +107,8 @@
 				E25890A21D422BDF00F4738B /* AppDelegate.swift */,
 				E25890A41D422BE000F4738B /* ViewController.swift */,
 				E25890A61D422BE000F4738B /* Main.storyboard */,
+				E25890B51D42333700F4738B /* Icon.swift */,
+				E25890C01D42333700F4738B /* IconSet.swift */,
 				E25890B41D42333700F4738B /* Icons */,
 				E25890CB1D42333700F4738B /* Images */,
 				E25890A91D422BE000F4738B /* Assets.xcassets */,
@@ -119,7 +121,6 @@
 		E25890B41D42333700F4738B /* Icons */ = {
 			isa = PBXGroup;
 			children = (
-				E25890B51D42333700F4738B /* Icon.swift */,
 				E25890B61D42333700F4738B /* icons_winter_01.png */,
 				E25890B71D42333700F4738B /* icons_winter_02.png */,
 				E25890B81D42333700F4738B /* icons_winter_03.png */,
@@ -130,7 +131,6 @@
 				E25890BD1D42333700F4738B /* icons_winter_08.png */,
 				E25890BE1D42333700F4738B /* icons_winter_09.png */,
 				E25890BF1D42333700F4738B /* icons_winter_10.png */,
-				E25890C01D42333700F4738B /* IconSet.swift */,
 				E25890C11D42333700F4738B /* summericons_100px_01.png */,
 				E25890C21D42333700F4738B /* summericons_100px_02.png */,
 				E25890C31D42333700F4738B /* summericons_100px_03.png */,
