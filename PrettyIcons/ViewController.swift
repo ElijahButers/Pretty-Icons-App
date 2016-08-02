@@ -50,5 +50,11 @@ extension ViewController: UITableViewDataSource {
         }
         return cell
     }
+    
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        
+        let iconSet = iconSets[section]
+        return iconSet.name
+    }
 }
 
