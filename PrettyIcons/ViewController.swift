@@ -27,6 +27,11 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDataSource {
     
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        
+        return iconSets.count
+    }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return icons.count
     }
