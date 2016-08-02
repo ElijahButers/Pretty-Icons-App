@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var icons = [Icon]()
+    var iconSets = [IconSet]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
