@@ -68,5 +68,15 @@ extension ViewController: UITableViewDataSource {
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
         }
     }
+    
+    override func setEditing(editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+        
+        if editing {
+            tableView.setEditing(true, animated: true)
+        } else {
+            tableView.setEditing(false, animated: true)
+        }
+    }
 }
 
