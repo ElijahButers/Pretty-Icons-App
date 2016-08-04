@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var tableView: UITableView!
+    
     var iconSets = [IconSet]()
 
     override func viewDidLoad() {

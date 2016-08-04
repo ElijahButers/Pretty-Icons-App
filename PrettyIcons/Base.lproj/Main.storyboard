@@ -60,6 +60,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Pretty Icons" id="Hfk-1v-SlE"/>
+                    <connections>
+                        <outlet property="tableView" destination="fNi-1f-H1m" id="4S9-nr-OEc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
