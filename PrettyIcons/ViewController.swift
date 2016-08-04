@@ -56,5 +56,14 @@ extension ViewController: UITableViewDataSource {
         let iconSet = iconSets[section]
         return iconSet.name
     }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if editingStyle == .Delete {
+            let set = iconSets[indexPath.section]
+            set.icons.removeAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        }
+    }
 }
 
