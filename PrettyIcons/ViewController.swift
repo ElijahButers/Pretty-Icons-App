@@ -46,11 +46,20 @@ extension ViewController: UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "IconCell", for: indexPath)
         let iconSet = iconSets[indexPath.section]
+        
+        if indexPath.row >= iconSet.icons.count && isEditing {
+            
+            cell.textLabel?.text = "Add icon"
+            cell.detailTextLabel?.text = nil
+            cell.imageView?.image = nil
+        } else {
+            
         let icon = iconSet.icons[indexPath.row]
         cell.textLabel?.text = icon.title
         cell.detailTextLabel?.text = icon.subtitle
         if let iconImage = icon.image {
             cell.imageView?.image = iconImage
+        }
         }
         return cell
     }
