@@ -83,8 +83,23 @@ extension ViewController: UITableViewDataSource {
         super.setEditing(editing, animated: animated)
         
         if editing {
+            
+            tableView.beginUpdates()
+            for (index, set) in iconSets.enumerated() {
+                let indexPath = IndexPath(row: set.icons.count, section: index)
+                tableView.insertRows(at:[indexPath], with: .automatic)
+            }
+            tableView.endUpdates()
+            
             tableView.setEditing(true, animated: true)
         } else {
+            tableView.beginUpdates()
+            for (index, set) in iconSets.enumerated() {
+                let indexPath = IndexPath(row: set.icons.count, section: index)
+                tableView.deleteRows(at:[indexPath], with: .automatic)
+            }
+            tableView.endUpdates()
+ 
             tableView.setEditing(false, animated: true)
         }
     }
