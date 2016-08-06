@@ -23,11 +23,11 @@
 import UIKit
 
 enum RatingType : Int {
-  case Unrated
-  case Ugly
-  case OK
-  case Nice
-  case Awesome
+  case unrated
+  case ugly
+  case oK
+  case nice
+  case awesome
 }
 
 class Icon {
@@ -35,7 +35,7 @@ class Icon {
   var title: String
   var subtitle: String
   var image: UIImage?
-  var rating = RatingType.Unrated
+  var rating = RatingType.unrated
   
   init(withTitle title: String, subtitle: String, imageName: String?) {
     self.title = title
