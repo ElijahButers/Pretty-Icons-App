@@ -41,9 +41,9 @@ extension ViewController: UITableViewDataSource {
         return iconSet.icons.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("IconCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "IconCell", for: indexPath)
         let iconSet = iconSets[indexPath.section]
         let icon = iconSet.icons[indexPath.row]
         cell.textLabel?.text = icon.title
@@ -60,16 +60,16 @@ extension ViewController: UITableViewDataSource {
         return iconSet.name
     }
     
-    func tableView(_ tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         
-        if editingStyle == .Delete {
+        if editingStyle == .delete {
             let set = iconSets[indexPath.section]
-            set.icons.removeAtIndex(indexPath.row)
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+            set.icons.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }
     
-    override func setEditing(editing: Bool, animated: Bool) {
+    override func setEditing(_ editing: Bool, animated: Bool) {
         super.setEditing(editing, animated: animated)
         
         if editing {

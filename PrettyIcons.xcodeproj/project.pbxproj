@@ -188,6 +188,7 @@
 					E258909E1D422BDF00F4738B = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = DG9E3T36HM;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -370,6 +371,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Macintosh.PrettyIcons;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -381,6 +383,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Macintosh.PrettyIcons;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
