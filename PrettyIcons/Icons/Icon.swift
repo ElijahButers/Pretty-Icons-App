@@ -25,7 +25,7 @@ import UIKit
 enum RatingType : Int {
   case unrated
   case ugly
-  case oK
+  case ok
   case nice
   case awesome
 }
