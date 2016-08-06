@@ -37,8 +37,9 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
+        let adjustment = isEditing ? 1 : 0
         let iconSet = iconSets[section]
-        return iconSet.icons.count
+        return iconSet.icons.count + adjustment
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
