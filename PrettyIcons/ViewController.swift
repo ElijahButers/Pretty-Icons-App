@@ -76,6 +76,21 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             let set = iconSets[indexPath.section]
             set.icons.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
+        } else if editingStyle == .insert {
+            let newIcon = Icon(withTitle: "New Icon", subtitle: "", imageName: nil)
+            let set = iconSets[indexPath.section]
+            set.icons.append(newIcon)
+            tableView.insertRows(at: [indexPath], with: .automatic)
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
+        
+        let set = iconSets[indexPath.section]
+        if indexPath.row >= set.icons.count {
+            return .insert
+        } else {
+            return .delete
         }
     }
     
