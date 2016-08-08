@@ -20,6 +20,7 @@ class ViewController: UIViewController {
         iconSets = IconSet.iconSets()
         navigationItem.rightBarButtonItem = editButtonItem
         automaticallyAdjustsScrollViewInsets = false
+        tableView.allowsSelectionDuringEditing = true
     }
 
     override func didReceiveMemoryWarning() {
