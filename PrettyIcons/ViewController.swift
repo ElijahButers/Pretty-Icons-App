@@ -95,6 +95,15 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         }
     }
     
+    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        
+        let set = iconSets[indexPath.section]
+        if isEditing && indexPath.row < set.icons.count {
+            return nil
+        }
+        return indexPath
+    }
+    
     override func setEditing(_ editing: Bool, animated: Bool) {
         super.setEditing(editing, animated: animated)
         
