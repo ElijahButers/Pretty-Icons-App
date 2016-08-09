@@ -60,7 +60,9 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         cell.detailTextLabel?.text = icon.subtitle
         if let iconImage = icon.image {
             cell.imageView?.image = iconImage
-        }
+        } else {
+            cell.imageView?.image = nil
+            }
         }
         return cell
     }
