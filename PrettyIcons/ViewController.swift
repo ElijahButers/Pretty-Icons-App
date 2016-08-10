@@ -140,6 +140,15 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         }
     }
     
+    func tableView(_ tableView: UITableView, targetIndexPathForMoveFromRowAt sourceIndexPath: IndexPath, toProposedIndexPath proposedDestinationIndexPath: IndexPath) -> IndexPath {
+        
+        let set  = iconSets[proposedDestinationIndexPath.section]
+        if proposedDestinationIndexPath.row >= set.icons.count {
+            return IndexPath(item: set.icons.count-1, section: proposedDestinationIndexPath.section)
+        }
+        return proposedDestinationIndexPath
+    }
+    
     override func setEditing(_ editing: Bool, animated: Bool) {
         super.setEditing(editing, animated: animated)
         
