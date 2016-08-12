@@ -67,6 +67,12 @@
                                                 <constraint firstAttribute="bottom" secondItem="ywV-NI-RsV" secondAttribute="bottom" constant="3" id="vFt-L0-S2j"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="favoriteImageView" destination="zru-Kr-3ND" id="84Z-SE-gtc"/>
+                                            <outlet property="iconImageView" destination="uUT-tI-i1p" id="nHX-VH-N43"/>
+                                            <outlet property="subtitleLabel" destination="TYq-vo-OEI" id="vHw-mN-wWj"/>
+                                            <outlet property="titleLabel" destination="mgc-hh-YXR" id="dJI-ok-ziw"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewRowCell" textLabel="RPA-0M-Cvv" detailTextLabel="hXF-zO-4xN" style="IBUITableViewCellStyleSubtitle" id="oz4-hp-CEy">
                                         <rect key="frame" x="0.0" y="159" width="600" height="44"/>
