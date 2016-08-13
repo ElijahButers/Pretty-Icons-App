@@ -45,27 +45,36 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "IconCell", for: indexPath)
+        let cell: UITableViewCell
         let iconSet = iconSets[indexPath.section]
         
         if indexPath.row >= iconSet.icons.count && isEditing {
-            
+            cell = tableView.dequeueReusableCell(withIdentifier: "NewRowCell", for: indexPath)
             cell.textLabel?.text = "Add icon"
             cell.detailTextLabel?.text = nil
             cell.imageView?.image = nil
         } else {
-            
-        let icon = iconSet.icons[indexPath.row]
-        cell.textLabel?.text = icon.title
-        cell.detailTextLabel?.text = icon.subtitle
-        if let iconImage = icon.image {
-            cell.imageView?.image = iconImage
-        } else {
-            cell.imageView?.image = nil
+        cell = tableView.dequeueReusableCell(withIdentifier: "IconCell", for: indexPath)
+            if let iconCell = cell as? IconTableViewCell {
+                let icon = iconSet.icons[indexPath.row]
+                iconCell.titleLabel.text = icon.title
+                iconCell.subtitleLabel.text = icon.subtitle
+                
+                if let iconImage = icon.image {
+                    iconCell.imageView?.image = iconImage
+                } else {
+                    iconCell.imageView?.image = nil
+                }
+                
+                if icon.rating == .awesome {
+                    iconCell.favoriteImageView.image = UIImage(named: "star_sel.png")
+                } else {
+                    iconCell.favoriteImageView.image = UIImage(named: "star_uns.png")
+                }
             }
         }
-        return cell
-    }
+            return cell
+        }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
