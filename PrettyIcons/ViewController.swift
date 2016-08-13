@@ -21,6 +21,8 @@ class ViewController: UIViewController {
         navigationItem.rightBarButtonItem = editButtonItem
         automaticallyAdjustsScrollViewInsets = false
         tableView.allowsSelectionDuringEditing = true
+        tableView.estimatedRowHeight = 67.0
+        tableView.rowHeight = UITableViewAutomaticDimension
     }
 
     override func didReceiveMemoryWarning() {
