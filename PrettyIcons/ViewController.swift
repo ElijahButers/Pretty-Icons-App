@@ -63,9 +63,9 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
                 iconCell.subtitleLabel.text = icon.subtitle
                 
                 if let iconImage = icon.image {
-                    iconCell.imageView?.image = iconImage
+                    iconCell.iconImageView?.image = iconImage
                 } else {
-                    iconCell.imageView?.image = nil
+                    iconCell.iconImageView?.image = nil
                 }
                 
                 if icon.rating == .awesome {
