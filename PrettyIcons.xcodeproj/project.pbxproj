@@ -37,6 +37,7 @@
 		E25890E51D42333700F4738B /* eyeball.png in Resources */ = {isa = PBXBuildFile; fileRef = E25890CC1D42333700F4738B /* eyeball.png */; };
 		E25890E61D42333700F4738B /* star_sel.png in Resources */ = {isa = PBXBuildFile; fileRef = E25890CD1D42333700F4738B /* star_sel.png */; };
 		E25890E71D42333700F4738B /* star_uns.png in Resources */ = {isa = PBXBuildFile; fileRef = E25890CE1D42333700F4738B /* star_uns.png */; };
+		E259B8661D63130E0060AA35 /* EditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E259B8651D63130E0060AA35 /* EditTableViewController.swift */; };
 		E2E59E9A1D5E0D5400554508 /* IconTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E59E991D5E0D5400554508 /* IconTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,7 @@
 		E25890CC1D42333700F4738B /* eyeball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eyeball.png; sourceTree = "<group>"; };
 		E25890CD1D42333700F4738B /* star_sel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star_sel.png; sourceTree = "<group>"; };
 		E25890CE1D42333700F4738B /* star_uns.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star_uns.png; sourceTree = "<group>"; };
+		E259B8651D63130E0060AA35 /* EditTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTableViewController.swift; sourceTree = "<group>"; };
 		E2E59E991D5E0D5400554508 /* IconTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,6 +111,7 @@
 				E25890A21D422BDF00F4738B /* AppDelegate.swift */,
 				E25890A41D422BE000F4738B /* ViewController.swift */,
 				E25890A61D422BE000F4738B /* Main.storyboard */,
+				E259B8651D63130E0060AA35 /* EditTableViewController.swift */,
 				E2E59E991D5E0D5400554508 /* IconTableViewCell.swift */,
 				E25890B51D42333700F4738B /* Icon.swift */,
 				E25890C01D42333700F4738B /* IconSet.swift */,
@@ -255,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2E59E9A1D5E0D5400554508 /* IconTableViewCell.swift in Sources */,
+				E259B8661D63130E0060AA35 /* EditTableViewController.swift in Sources */,
 				E25890CF1D42333700F4738B /* Icon.swift in Sources */,
 				E25890DA1D42333700F4738B /* IconSet.swift in Sources */,
 				E25890A51D422BE000F4738B /* ViewController.swift in Sources */,
