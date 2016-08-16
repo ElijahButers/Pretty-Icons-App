@@ -29,6 +29,20 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "GoToEdit" {
+      
+        let editViewController = segue.destination as? EditTableViewController
+        if let indexPath = tableView.indexPathForSelectedRow {
+            let set = iconSets[indexPath.section]
+            let icon = set.icons[indexPath.row]
+            editViewController?.icon = icon
+        }
+    }
+    }
+
 }
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
