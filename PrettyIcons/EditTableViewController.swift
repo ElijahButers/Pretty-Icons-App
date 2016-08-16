@@ -9,6 +9,8 @@
 import UIKit
 
 class EditTableViewController: UITableViewController {
+    
+    var icon: Icon?
 
     override func viewDidLoad() {
         super.viewDidLoad()
