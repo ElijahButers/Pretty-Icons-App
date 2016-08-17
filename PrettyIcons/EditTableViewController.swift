@@ -10,6 +10,11 @@ import UIKit
 
 class EditTableViewController: UITableViewController {
     
+    @IBOutlet weak var iconImageView: UIImageView!
+    @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var subtitleTextField: UITextField!
+    @IBOutlet weak var ratingLabel: UILabel!
+    
     var icon: Icon?
 
     override func viewDidLoad() {

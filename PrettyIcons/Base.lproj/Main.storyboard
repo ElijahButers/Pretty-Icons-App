@@ -253,6 +253,12 @@
                             <outlet property="delegate" destination="VZS-qj-uFJ" id="7f8-pt-rPe"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="iconImageView" destination="bcL-gi-uC2" id="s3H-kg-eTY"/>
+                        <outlet property="ratingLabel" destination="vUX-2D-b8N" id="lpN-2R-hBX"/>
+                        <outlet property="subtitleTextField" destination="7G2-pa-3v0" id="rNa-YR-AX1"/>
+                        <outlet property="titleTextField" destination="bxl-Na-qzs" id="36l-vV-P1A"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gr3-9a-sG3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
