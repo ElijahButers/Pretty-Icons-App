@@ -23,10 +23,10 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="IconCell" rowHeight="67" id="ctm-Yf-ymr" customClass="IconTableViewCell" customModule="PrettyIcons" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="1000" height="67"/>
+                                        <rect key="frame" x="0.0" y="92" width="375" height="67"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ctm-Yf-ymr" id="jjs-CS-dYB">
-                                            <frame key="frameInset" width="1000" height="67"/>
+                                            <frame key="frameInset" width="375" height="67"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ywV-NI-RsV">
@@ -76,21 +76,21 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewRowCell" textLabel="RPA-0M-Cvv" detailTextLabel="hXF-zO-4xN" style="IBUITableViewCellStyleSubtitle" id="oz4-hp-CEy">
-                                        <rect key="frame" x="0.0" y="159" width="1000" height="44"/>
+                                        <rect key="frame" x="0.0" y="159" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oz4-hp-CEy" id="5rE-Tb-MmY">
-                                            <frame key="frameInset" width="1000" height="44"/>
+                                            <frame key="frameInset" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="RPA-0M-Cvv">
-                                                    <frame key="frameInset" minX="164" minY="6" width="31.5" height="19.5"/>
+                                                    <frame key="frameInset" minX="15" minY="6" width="31.5" height="19.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hXF-zO-4xN">
-                                                    <frame key="frameInset" minX="164" minY="25.5" width="40.5" height="13.5"/>
+                                                    <frame key="frameInset" minX="15" minY="25.5" width="40.5" height="13.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -229,19 +229,19 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jR8-dL-rqe">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vUX-2D-b8N">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <textInputTraits key="textInputTraits"/>
-                                                        </textField>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="fqm-pw-uoe" firstAttribute="leading" secondItem="PIC-N3-Jb7" secondAttribute="leading" constant="20" id="HKq-1C-IyO"/>
-                                                <constraint firstAttribute="bottom" secondItem="fqm-pw-uoe" secondAttribute="bottom" id="Lxw-jq-Hk6"/>
-                                                <constraint firstItem="fqm-pw-uoe" firstAttribute="top" secondItem="PIC-N3-Jb7" secondAttribute="top" id="TeC-WM-xEH"/>
-                                                <constraint firstAttribute="trailing" secondItem="fqm-pw-uoe" secondAttribute="trailing" constant="20" id="aG8-br-f5M"/>
+                                                <constraint firstItem="fqm-pw-uoe" firstAttribute="top" secondItem="PIC-N3-Jb7" secondAttribute="top" id="9z9-Cd-tVU"/>
+                                                <constraint firstAttribute="bottom" secondItem="fqm-pw-uoe" secondAttribute="bottom" id="SHh-eG-l5s"/>
+                                                <constraint firstAttribute="trailing" secondItem="fqm-pw-uoe" secondAttribute="trailing" constant="20" id="SNH-f4-Y8v"/>
+                                                <constraint firstItem="fqm-pw-uoe" firstAttribute="leading" secondItem="PIC-N3-Jb7" secondAttribute="leading" constant="20" id="zGM-3A-BrW"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
