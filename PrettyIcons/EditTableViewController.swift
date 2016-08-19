@@ -18,7 +18,7 @@ class EditTableViewController: UITableViewController {
     var icon: Icon?
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
+        super.viewWillAppear(animated)
         
         guard let icon = icon else {
             return
@@ -28,9 +28,9 @@ class EditTableViewController: UITableViewController {
         }
         titleTextField.text = icon.title
         subtitleTextField.text = icon.subtitle
-        ratingLabel.text = String(icon.rating)
+        ratingLabel.text = String(describing: icon.rating)
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

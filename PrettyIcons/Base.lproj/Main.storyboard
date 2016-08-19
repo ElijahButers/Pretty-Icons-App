@@ -121,7 +121,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1373.5999999999999" y="394.45277361319341"/>
+            <point key="canvasLocation" x="1538" y="394"/>
         </scene>
         <!--Edit Table View Controller-->
         <scene sceneID="BCf-ne-9IZ">
