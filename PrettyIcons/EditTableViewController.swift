@@ -74,3 +74,7 @@ class EditTableViewController: UITableViewController {
         return 0
     }
 }
+
+extension EditTableViewController: UITextFieldDelegate {
+    
+}
