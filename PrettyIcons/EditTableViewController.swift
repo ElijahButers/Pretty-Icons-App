@@ -77,4 +77,9 @@ class EditTableViewController: UITableViewController {
 
 extension EditTableViewController: UITextFieldDelegate {
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        tableView.resignFirstResponder()
+        return true
+    }
 }
