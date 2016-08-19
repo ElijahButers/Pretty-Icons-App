@@ -31,6 +31,22 @@ class EditTableViewController: UITableViewController {
         ratingLabel.text = String(describing: icon.rating)
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        
+        guard let icon = icon else {
+            return
+        }
+        if let iconImage = iconImageView.image {
+            icon.image = iconImage
+        }
+        if let title = titleTextField.text {
+            icon.title = title
+        }
+        if let subtitle = subtitleTextField.text {
+            icon.subtitle = subtitle
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
