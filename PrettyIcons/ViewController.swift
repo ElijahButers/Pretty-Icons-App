@@ -13,6 +13,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var iconSets = [IconSet]()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        tableView.reloadData()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
