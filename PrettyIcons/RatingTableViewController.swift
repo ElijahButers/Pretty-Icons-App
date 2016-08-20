@@ -9,6 +9,8 @@
 import UIKit
 
 class RatingTableViewController: UITableViewController {
+    
+    var icon: Icon?
 
     override func viewDidLoad() {
         super.viewDidLoad()
