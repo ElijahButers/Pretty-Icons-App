@@ -245,7 +245,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="LML-1c-uyT" kind="show" id="4P7-Ci-J19"/>
+                                            <segue destination="LML-1c-uyT" kind="show" identifier="GoToRating" id="4P7-Ci-J19"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
