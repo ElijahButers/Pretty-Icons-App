@@ -23,11 +23,13 @@
 import UIKit
 
 enum RatingType : Int {
-  case unrated
-  case ugly
-  case ok
-  case nice
-  case awesome
+    case unrated
+    case ugly
+    case ok
+    case nice
+    case awesome
+    case totalRatings
+    
 }
 
 class Icon {
@@ -45,7 +47,5 @@ class Icon {
         image = iconImage
       }
     }
-
-    
   }  
 }
