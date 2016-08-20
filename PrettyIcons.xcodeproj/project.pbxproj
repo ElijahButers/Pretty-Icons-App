@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E2180FA41D687C74003FF5AA /* RatingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2180FA31D687C74003FF5AA /* RatingTableViewController.swift */; };
 		E25890A31D422BE000F4738B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25890A21D422BDF00F4738B /* AppDelegate.swift */; };
 		E25890A51D422BE000F4738B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25890A41D422BE000F4738B /* ViewController.swift */; };
 		E25890A81D422BE000F4738B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E25890A61D422BE000F4738B /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E2180FA31D687C74003FF5AA /* RatingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingTableViewController.swift; sourceTree = "<group>"; };
 		E258909F1D422BDF00F4738B /* PrettyIcons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrettyIcons.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E25890A21D422BDF00F4738B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E25890A41D422BE000F4738B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				E25890A21D422BDF00F4738B /* AppDelegate.swift */,
 				E25890A41D422BE000F4738B /* ViewController.swift */,
 				E25890A61D422BE000F4738B /* Main.storyboard */,
+				E2180FA31D687C74003FF5AA /* RatingTableViewController.swift */,
 				E259B8651D63130E0060AA35 /* EditTableViewController.swift */,
 				E2E59E991D5E0D5400554508 /* IconTableViewCell.swift */,
 				E25890B51D42333700F4738B /* Icon.swift */,
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2E59E9A1D5E0D5400554508 /* IconTableViewCell.swift in Sources */,
+				E2180FA41D687C74003FF5AA /* RatingTableViewController.swift in Sources */,
 				E259B8661D63130E0060AA35 /* EditTableViewController.swift in Sources */,
 				E25890CF1D42333700F4738B /* Icon.swift in Sources */,
 				E25890DA1D42333700F4738B /* IconSet.swift in Sources */,
