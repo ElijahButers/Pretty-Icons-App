@@ -26,6 +26,16 @@ class RatingTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func refresh() {
+        
+        for index in 0 ... RatingType.totalRatings.rawValue {
+            let indexPath = IndexPath(row: index, section: 0)
+            if let cell = tableView.cellForRow(at: indexPath) {
+                cell.accessoryType = icon?.rating.rawValue == index ? . checkmark : .none
+            }
+        }
+    }
 
     // MARK: - Table view data source
 }
