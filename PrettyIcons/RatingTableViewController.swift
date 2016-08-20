@@ -11,6 +11,12 @@ import UIKit
 class RatingTableViewController: UITableViewController {
     
     var icon: Icon?
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        refresh()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
