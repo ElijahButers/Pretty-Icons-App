@@ -32,7 +32,7 @@ enum RatingType : Int {
     
 }
 
-class Icon {
+class Icon: NSObject, Comparable {
   
   var title: String
   var subtitle: String
