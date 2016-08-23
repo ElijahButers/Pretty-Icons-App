@@ -49,3 +49,11 @@ class Icon: NSObject, Comparable {
     }
   }  
 }
+
+func < (lhs: Icon, rhs: Icon) -> Bool {
+    return lhs.title < rhs.title
+}
+
+func == (lhs: Icon, rhs: Icon) -> Bool {
+    return lhs.title == rhs.title && lhs.subtitle == rhs.subtitle
+}
