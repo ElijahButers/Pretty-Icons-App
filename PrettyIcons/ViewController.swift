@@ -154,22 +154,6 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         return true
     }
     
-    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        
-        let sourceSet = iconSets[sourceIndexPath.section]
-        let destinationSet = iconSets[destinationIndexPath.section]
-        let iconToMove = sourceSet.icons[sourceIndexPath.row]
-        
-        if sourceSet == destinationSet {
-            if destinationIndexPath.row != sourceIndexPath.row {
-                swap(&destinationSet.icons[destinationIndexPath.row], &destinationSet.icons[sourceIndexPath.row])
-            }
-        } else {
-            destinationSet.icons.insert(iconToMove, at: destinationIndexPath.row)
-            sourceSet.icons.remove(at: sourceIndexPath.row)
-        }
-    }
-    
     func tableView(_ tableView: UITableView, targetIndexPathForMoveFromRowAt sourceIndexPath: IndexPath, toProposedIndexPath proposedDestinationIndexPath: IndexPath) -> IndexPath {
         
         let set  = iconSets[proposedDestinationIndexPath.section]
