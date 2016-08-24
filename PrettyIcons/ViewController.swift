@@ -38,6 +38,15 @@ class ViewController: UIViewController {
             }
         }
         
+        iconSets = allSections
+        
+        for index in 0 ... iconSets.count - 1 {
+            let iconSet = iconSets[index]
+            if let set = iconSet {
+                iconSets[index] = set.sorted(by: <)
+            }
+        }
+        
         navigationItem.rightBarButtonItem = editButtonItem
         automaticallyAdjustsScrollViewInsets = false
         tableView.allowsSelectionDuringEditing = true
