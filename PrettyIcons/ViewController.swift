@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         for iconSet in sets {
             var sectionNumber: Int
             for icon in iconSet.icons {
-                sectionNumber = collation.section(for: icon, collationStringSelector: "title")
+                sectionNumber = collation.section(for: icon, collationStringSelector: #selector(getter: UIPreviewAction.title))
                 if allSections[sectionNumber] == nil {
                     allSections[sectionNumber] = [Icon?]()
                 }
