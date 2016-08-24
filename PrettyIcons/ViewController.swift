@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var iconSets = [IconSet]()
+    var iconSets: [[Icon?]?]!
     
     override func viewWillAppear(_ animated: Bool) {
         
