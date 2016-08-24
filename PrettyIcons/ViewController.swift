@@ -25,6 +25,19 @@ class ViewController: UIViewController {
         let sectionTitlesCount = UILocalizedIndexedCollation.current().sectionTitles.count
         var allSections = [[Icon?]?](repeating: nil, count: sectionTitlesCount)
         
+        let sets = IconSet.iconSets()
+        let collation = UILocalizedIndexedCollation.current()
+        for iconSet in sets {
+            var sectionNumber: Int
+            for icon in iconSet.icons {
+                sectionNumber = collation.section(for: icon, collationStringSelector: "title")
+                if allSections[sectionNumber] == nil {
+                    allSections[sectionNumber] = [Icon?]()
+                }
+                allSections[sectionNumber]!.append(icon)
+            }
+        }
+        
         navigationItem.rightBarButtonItem = editButtonItem
         automaticallyAdjustsScrollViewInsets = false
         tableView.allowsSelectionDuringEditing = true
