@@ -22,7 +22,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        iconSets = IconSet.iconSets()
+        let sectionTitlesCount = UILocalizedIndexedCollation.current().sectionTitles.count
+        var allSections = [[Icon?]?](repeating: nil, count: sectionTitlesCount)
+        
         navigationItem.rightBarButtonItem = editButtonItem
         automaticallyAdjustsScrollViewInsets = false
         tableView.allowsSelectionDuringEditing = true
