@@ -205,7 +205,16 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
         
-        return UILocalizedIndexedCollation.current().section(forSectionIndexTitle: index)
+        var sectionIndex = UILocalizedIndexedCollation.current().section(forSectionIndexTitle: index)
+        let totalSections = iconSets.count
+        
+        for counter in index ... totalSections - 1 {
+            if iconSets[counter]?.count > 0 {
+                sectionIndex = counter
+                break
+            }
+        }
+        return sectionIndex
     }
     
     override func setEditing(_ editing: Bool, animated: Bool) {
