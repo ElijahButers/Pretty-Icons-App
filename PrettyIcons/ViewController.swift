@@ -134,8 +134,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
-        let iconSet = iconSets[section]
-        return iconSet.count.name
+        return UILocalizedIndexedCollation.current().sectionTitles[section]
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
