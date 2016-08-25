@@ -94,9 +94,10 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        let adjustment = isEditing ? 1 : 0
-        let iconSet = iconSets[section]
-        return iconSet!.count + adjustment
+        guard let iconSet = iconSets[section] else {
+            return 0
+        }
+        return iconSet.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
