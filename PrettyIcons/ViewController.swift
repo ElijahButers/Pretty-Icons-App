@@ -198,6 +198,16 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         return proposedDestinationIndexPath
     }
     
+    func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+        
+        return UILocalizedIndexedCollation.current().sectionTitles
+    }
+    
+    func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
+        
+        return UILocalizedIndexedCollation.current().section(forSectionIndexTitle: index)
+    }
+    
     override func setEditing(_ editing: Bool, animated: Bool) {
         super.setEditing(editing, animated: animated)
         
