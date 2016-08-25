@@ -77,7 +77,7 @@ class ViewController: UIViewController {
         let editViewController = segue.destination as? EditTableViewController
         if let indexPath = tableView.indexPathForSelectedRow {
             let set = iconSets[indexPath.section]
-            let icon = set.icons[indexPath.row]
+            let icon = set![indexPath.row]
             editViewController?.icon = icon
         }
     }
@@ -96,7 +96,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         
         let adjustment = isEditing ? 1 : 0
         let iconSet = iconSets[section]
-        return iconSet.icons.count + adjustment
+        return iconSet!.count + adjustment
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -104,7 +104,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         let cell: UITableViewCell
         let iconSet = iconSets[indexPath.section]
         
-        if indexPath.row >= iconSet.icons.count && isEditing {
+        if indexPath.row >= iconSet!.count && isEditing {
             cell = tableView.dequeueReusableCell(withIdentifier: "NewRowCell", for: indexPath)
             cell.textLabel?.text = "Add icon"
             cell.detailTextLabel?.text = nil
@@ -112,17 +112,17 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         } else {
         cell = tableView.dequeueReusableCell(withIdentifier: "IconCell", for: indexPath)
             if let iconCell = cell as? IconTableViewCell {
-                let icon = iconSet.icons[indexPath.row]
-                iconCell.titleLabel.text = icon.title
-                iconCell.subtitleLabel.text = icon.subtitle
+                let icon = iconSet![indexPath.row]
+                iconCell.titleLabel.text = icon?.title
+                iconCell.subtitleLabel.text = icon?.subtitle
                 
-                if let iconImage = icon.image {
+                if let iconImage = icon?.image {
                     iconCell.iconImageView?.image = iconImage
                 } else {
                     iconCell.iconImageView?.image = nil
                 }
                 
-                if icon.rating == .awesome {
+                if icon?.rating == .awesome {
                     iconCell.favoriteImageView.image = UIImage(named: "star_sel.png")
                 } else {
                     iconCell.favoriteImageView.image = UIImage(named: "star_uns.png")
@@ -135,19 +135,19 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
         let iconSet = iconSets[section]
-        return iconSet.name
+        return iconSet.count.name
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         
         if editingStyle == .delete {
-            let set = iconSets[indexPath.section]
-            set.icons.remove(at: indexPath.row)
+            var set = iconSets[indexPath.section]
+            set!.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
         } else if editingStyle == .insert {
             let newIcon = Icon(withTitle: "New Icon", subtitle: "", imageName: nil)
-            let set = iconSets[indexPath.section]
-            set.icons.append(newIcon)
+            var set = iconSets[indexPath.section]
+            set!.append(newIcon)
             tableView.insertRows(at: [indexPath], with: .automatic)
         }
     }
@@ -155,7 +155,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
         
         let set = iconSets[indexPath.section]
-        if indexPath.row >= set.icons.count {
+        if indexPath.row >= set!.count {
             return .insert
         } else {
             return .delete
@@ -165,7 +165,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
         
         let set = iconSets[indexPath.section]
-        if isEditing && indexPath.row < set.icons.count {
+        if isEditing && indexPath.row < set!.count {
             return nil
         }
         return indexPath
@@ -175,7 +175,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         
         tableView.deselectRow(at: indexPath, animated: true)
         let set = iconSets[indexPath.section]
-        if indexPath.row >= set.icons.count && isEditing {
+        if indexPath.row >= set!.count && isEditing {
             self.tableView(tableView, commit: .insert, forRowAt: indexPath) 
         }
     }
@@ -183,7 +183,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         
         let iconSet = iconSets[indexPath.section]
-        if indexPath.row >= iconSet.icons.count && isEditing {
+        if indexPath.row >= iconSet!.count && isEditing {
             return false
         }
         return true
@@ -192,8 +192,8 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, targetIndexPathForMoveFromRowAt sourceIndexPath: IndexPath, toProposedIndexPath proposedDestinationIndexPath: IndexPath) -> IndexPath {
         
         let set  = iconSets[proposedDestinationIndexPath.section]
-        if proposedDestinationIndexPath.row >= set.icons.count {
-            return IndexPath(item: set.icons.count-1, section: proposedDestinationIndexPath.section)
+        if proposedDestinationIndexPath.row >= set!.count {
+            return IndexPath(item: set!.count-1, section: proposedDestinationIndexPath.section)
         }
         return proposedDestinationIndexPath
     }
@@ -205,7 +205,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             
             tableView.beginUpdates()
             for (index, set) in iconSets.enumerated() {
-                let indexPath = IndexPath(row: set.icons.count, section: index)
+                let indexPath = IndexPath(row: set!.count, section: index)
                 tableView.insertRows(at:[indexPath], with: .automatic)
             }
             tableView.endUpdates()
@@ -214,7 +214,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         } else {
             tableView.beginUpdates()
             for (index, set) in iconSets.enumerated() {
-                let indexPath = IndexPath(row: set.icons.count, section: index)
+                let indexPath = IndexPath(row: set!.count, section: index)
                 tableView.deleteRows(at:[indexPath], with: .automatic)
             }
             tableView.endUpdates()
